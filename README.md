@@ -10,7 +10,7 @@ Sonuç olarak, bu program rastgele sayılarla bir dizi oluşturur, bu diziyi sı
  ## Kodun Zaman Karmaşıklığını Adım Adım Gösterimi:
 
 Zaman karmaşıklığı, bir algoritmanın çalışma süresinin girdi boyutuyla nasıl büyüdüğünün bir ölçüsüdür. Genellikle en kötü durum senaryosunda bir üst sınır veren büyük O gösterimi kullanılarak ifade edilir.
-Kodun dört işlevi vardır: üret, işlev1, işlev2 ve işlev3. Her işlevin, giriş dizisinde veya matriste kaç kez döngü yaptığına bağlı olarak farklı bir zaman karmaşıklığı vardır.
+Kodun dört işlevi vardır: generate, function1, function2 ve function3. Her işlevin, giriş dizisinde veya matriste kaç kez döngü yaptığına bağlı olarak farklı bir zaman karmaşıklığı vardır.
 
 - generate işlevi, O (n) zaman karmaşıklığına sahiptir; burada n, dizinin boyutudur. Bunun nedeni, dizinin içinden bir kez geçmesi ve her öğeye rastgele bir değer atamasıdır.
 
@@ -21,3 +21,25 @@ Kodun dört işlevi vardır: üret, işlev1, işlev2 ve işlev3. Her işlevin, g
 - function3 işlevi, O (n^3) zaman karmaşıklığına sahiptir; burada n, matrisin boyutudur. Bunun nedeni, ağırlıklı bir grafikteki tüm köşe çiftleri arasındaki en kısa yolları bulmak için Floyd-Warshall algoritmasını kullanmasıdır3. Floyd-Warshall algoritması, iç içe bir döngüde3 ara köşeleri kullanarak bir mesafe matrisini güncelleyerek çalışan tüm çiftlerden oluşan bir en kısa yol algoritmasıdır.
 
 Bu nedenle kodun toplam zaman karmaşıklığı, en yüksek dereceli terimin hakim olduğu O (n + n^2 + n + n^3) = O (n^3) şeklindedir.
+
+ ## Verilen Kodun Nasıl Geliştirilebileceği İçin Öneriler:
+ 
+ 1)  Yorum Ekleme: Her ne kadar kod düzgün görünse de, bazı kısımları anlamak biraz zor olabilir. Her fonksiyon için ne yaptığını açıklayan bir yorum satırı eklemek yardımcı olabilir.
+ 
+ 2)  Veri Güvenliği: rand() fonksiyonu gerçekten rastgele sayılar üretmez, bu nedenle daha güvenli bir alternatif kullanmayı düşünebilirsiniz. ( srand() vb. )
+
+ 3) Fonksiyon Adlandırma: function1, function2 ve function3 isimlerindeki fonksiyonlar, ne yaptıklarını tam olarak açıklamıyor. Bu fonksiyonların ne yaptıklarını daha iyi anlamak için daha açıklayıcı isimler (Türkçe Ve Uygun Tanımlarla) kullanabilirsiniz.
+ 
+ 4)  Daha Verimli Sıralama: function1 fonksiyonunda balon sıralaması kullanılmış. Bu sıralama algoritması genellikle yavaştır. Bu nedenle birleştirme sıralaması (merge sort) gibi algoritmalara geçmek kodun performansını artırabilir.
+ 
+ ## YenilenmisKod.cpp deki Kod da Çalışma Zamanı Ve Zaman Karmaşıklığı:
+
+Böylece, bu programın genel zaman karmaşıklığı, en yüksek karmaşıklığa sahip olan function3'ten dolayı O(V^3)'dir. Bu yüzden genel zaman karmaşıklığı O(V^3)'tir. Çalışma Zamanı ise 0.008000 sn dir.
+
+ ## Her İki Kodun Zaman Karmaşıklıkları ve Çalışma Sürelerinin Karşılastırılması:
+#### AA_Odev2_1(1):
+- Çalışma zamanı: 0.010000 sn
+- Zaman Karmaşıklığı: O(n^3)
+#### YenilenmisKod:
+- Çalışma zamanı: 0.008000 sn
+- Zaman Karmaşıklığı: O(V^3)
