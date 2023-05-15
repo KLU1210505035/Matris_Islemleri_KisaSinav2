@@ -31,6 +31,7 @@ Bu nedenle kodun toplam zaman karmaşıklığı, en yüksek dereceli terimin hak
  3) Fonksiyon Adlandırma: function1, function2 ve function3 isimlerindeki fonksiyonlar, ne yaptıklarını tam olarak açıklamıyor. Bu fonksiyonların ne yaptıklarını daha iyi anlamak için daha açıklayıcı isimler (Türkçe Ve Uygun Tanımlarla) kullanabilirsiniz.
  
  4)  Daha Verimli Sıralama: function1 fonksiyonunda balon sıralaması kullanılmış. Bu sıralama algoritması genellikle yavaştır. Bu nedenle birleştirme sıralaması (merge sort) gibi algoritmalara geçmek kodun performansını artırabilir.
+ 5)  Makro Kullanımı: INF ve MAX_W gibi değerler makro olarak tanımlanmış. Ancak, bu tür sabit değerler genellikle const anahtar kelimesi ile tanımlanır. Bu, bu değerlerin yanlışlıkla değiştirilmesini önler.
  
  ## YenilenmisKod.cpp deki Kod da Çalışma Zamanı Ve Zaman Karmaşıklığı:
 
